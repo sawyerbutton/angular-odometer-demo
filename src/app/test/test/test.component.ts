@@ -9,6 +9,7 @@ import {Observable} from 'rxjs';
 })
 export class TestComponent implements OnInit, OnDestroy {
   passingByvalue$: Observable<number>;
+  repeatCallValue$: Observable<string>;
   constructor(
     private service: TestService
   ) {
@@ -17,6 +18,7 @@ export class TestComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.passingByvalue$ = this.service.getTestData();
+    this.repeatCallValue$ = this.service.getRepeatCallDataInOtherWay();
   }
   ngOnDestroy() {
     console.log('Test component has been destroyed');

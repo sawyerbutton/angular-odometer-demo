@@ -15,6 +15,10 @@ const routes: Routes = [
   {// test
     path: 'odometer',
     loadChildren: './odometer-feature/odometer/odometer.module#OdometerModule'
+  },
+  {
+    path: 'in-component-change',
+    loadChildren: './in-component-change/in-component-change.module#InComponentChangeModule'
   }
 ];
 
